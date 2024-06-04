@@ -1,5 +1,14 @@
 import os
 # função menu
+def exibir_msg(nome):
+    print(f'{'-'*20} Olá {nome}, seja bem vindo ao SENAI {'-'*20}')
+    print(f'Escolha o objeto desejado')
+
+# programa principal
+nome = input('Informe seu nome: ')
+# chama a função
+exibir_msg(nome)
+
 
 def exibir_menu():
     print('1 - Área do círculo.')
@@ -18,13 +27,12 @@ def calcular_triangulo(b, h):
 
 def calcular_trapezio(base_menor, base_maior, h):
     a = ((base_menor + base_maior)*h)/2
-    return a     
+    return a
     
 while True:
     exibir_menu()
     opcao = input('Opção desejada: ')
-    os.system('cls')
-
+    
     match opcao:
         case '1':
             print('Área do círculo: a = π*r²')
